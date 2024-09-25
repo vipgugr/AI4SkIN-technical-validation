@@ -122,9 +122,6 @@ def evaluate(model,X_ts_nor,y_test,verbose=False):
     indexes = (y_test!=-1)
     y_test = y_test[indexes]
 
-    # TODO: deep prediction
-    #y_pred_ = batch_prediction_multi_classification(model, prediction_multi_dgp, X_ts_nor, 100)
-
     y_pred_ = predict(model,X_ts_nor)
     y_pred = np.argmax(y_pred_,axis=1)
     y_pred = y_pred[indexes]
@@ -145,18 +142,9 @@ def evaluate_crowd(model,X_ts_nor,y_test,cm):
     indexes = (y_test!=-1)
     y_test = y_test[indexes]
 
-    # TODO: deep prediction
-    #y_pred_ = batch_prediction_multi_classification(model, prediction_multi_dgp, X_ts_nor, 100)
-
     y_pred_ = predict(model,X_ts_nor)
     y_pred_ann = cm @ y_pred_.T
     y_pred_ann = y_pred_ann.T
-    print(y_pred_ann.sum(1))
-    print(y_pred_)
-    print(y_pred_ann)
-    print(cm)
-    #y_pred_ann = np.array(probs_total_list)
-    print(y_pred_ann.shape)
     y_pred = np.argmax(y_pred_ann,axis=1)
     y_pred = y_pred[indexes]
     acc = accuracy_score(y_pred, y_test)
