@@ -26,7 +26,8 @@ def get_emb_av(values, folder):
     return np.array([np.mean(patch,axis=0) for patch in embd])
 
 def get_features(df, emb_mode):
-    emb_path = '/data/datasets/AI4SkIN_datasets/AI4SkINv2-2/embeddings_v3/' + emb_mode
+    raise("Update the data path for the embeddings")
+    emb_path = 'your/route/to/the/data' + emb_mode
     names = list(df['WSI'].values)
     X = get_emb_av(names, emb_path)
     return X, names
@@ -47,10 +48,10 @@ def process_labels_cr_v1(labels):
 class AI4SKIN_data:
     def __init__(self, label, emb_mode):
 
-        # Normalize
-
+        
+        raise("Update the data path for the labels")
         # load data
-        label_path = '/data/datasets/AI4SkIN_datasets/AI4SkINv2-2/'
+        label_path = '/route/to/labels'
 
         # Splits
         train_df = pd.read_csv(label_path + 'train.csv')
@@ -78,23 +79,6 @@ class AI4SKIN_data:
         self.X_train = self._norm(X_train)
         self.X_val = self._norm(X_val)
         self.X_test = self._norm(X_test)
-
-        """
-        if self.X_train.shape[1] > 512:
-            print("PCA!", self.X_train.shape, self.X_val.shape, self.X_test.shape)
-            PCA_transform = PCA(n_components=256)
-            self.X_train = PCA_transform.fit_transform(self.X_train)
-            self.X_val = PCA_transform.transform(self.X_val)
-            self.X_test = PCA_transform.transform(self.X_test)
-
-            self.m, self.std = self.X_train.mean(0), self.X_train.std(0)
-
-            self.X_train = self._norm(self.X_train)
-            self.X_val = self._norm(self.X_val)
-            self.X_test = self._norm(self.X_test)
-
-            print("Done PCA: ", self.X_train.shape, self.X_val.shape, self.X_test.shape)
-        """
 
     def _norm(self, data):
         return (data-self.m)/self.std
