@@ -29,5 +29,5 @@ The processed files to replicate the experiment of the current repo can be found
 ### Install dependencies
 
 ~~~
-$ conda install gpflow=1.14
+$ conda install gpflow=1.2.0
 ~~~
