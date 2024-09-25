@@ -1,6 +1,6 @@
 # A Fusocelular Skin Dataset with Whole Slide Images for Deep Learning Models
 
-![Approach](figures/Figure1.png)
+![Approach](fig.png)
 
 ### Code for replicating the results of the paper [A Fusocelular Skin Dataset with Whole Slide Images for Deep Learning Models]()
 
@@ -20,18 +20,14 @@ Cutaneous spindle cell (CSC) lesions range from benign to malignant tumors, lead
 ## Data source
 
 The data used was published in .
-~~~
+
 The processed files to replicate the experiment of the current repo can be found on the following [link](https://drive.google.com/drive/folders/1yWT1aaQLiZAkAomtAdFlqlVWnRkhNrCu).
-
-## Technical validation
-
-
-![System](fig.png)
 
 
 
 ## DEMO
 ### Install dependencies
+
 ~~~
 $ conda install gpflow=1.14
 ~~~
