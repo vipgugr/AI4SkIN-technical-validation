@@ -6,7 +6,15 @@
 
 #### Citation
 ~~~
-@article{
+@article{del2025fusocelular,
+  title={A fusocelular skin dataset with whole slide images for deep learning models},
+  author={Del Amor, Roc{\'\i}o and L{\'o}pez-P{\'e}rez, Miguel and Meseguer, Pablo and Morales, Sandra and Terradez, Liria and Aneiros-Fernandez, Jose and Mateos, Javier and Molina, Rafael and Naranjo, Valery},
+  journal={Scientific Data},
+  volume={12},
+  number={1},
+  pages={1--7},
+  year={2025},
+  publisher={Nature Publishing Group}
 }
 ~~~
 
