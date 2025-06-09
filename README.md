@@ -37,4 +37,5 @@ The processed files (embeddings, partitions, and labels) to replicate the experi
 
 ~~~
 $ conda install gpflow=1.2.0
+$ python src/main.py
 ~~~
