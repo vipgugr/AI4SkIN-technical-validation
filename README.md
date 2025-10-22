@@ -26,7 +26,7 @@ Cutaneous spindle cell (CSC) lesions range from benign to malignant tumors, lead
   
 ## Data source
 
-The data used is available at Figshare: https://doi.org/10.6084/m9.figshare.27118035.
+The data used is available at Figshare: https://doi.org/10.6084/m9.figshare.27118035. Find the labels and partitions in the following file: [labels.csv](data/labels.csv).
 
 The processed files (embeddings, partitions, and labels) to replicate the experiment of the current repo can be found on the following [link](https://drive.google.com/file/d/1B3j183eEn5dpl-Evf1GEPDuxwT9aGf4t/view?usp=drive_link).
 
